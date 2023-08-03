@@ -1,0 +1,61 @@
+!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        function cargar(sueldos) {
+            for (let f = 0; f < sueldos.length; f++) {
+                let v = prompt('Ingrese sueldo:');
+                sueldos[f] = parseInt(v);
+            }
+        }
+
+        function calcularGastos(sueldos) {
+            let total = 0;
+            for (let f = 0; f < sueldos.length; f++) {
+                total = total + sueldos[f];
+            }
+            document.write('Listado de sueldos<br>');
+            for (let f = 0; f < sueldos.length; f++) {
+                document.write(sueldos[f] + '<br>');
+            }
+            document.write('Total de gastos en sueldos:' + total);
+        }
+
+        let sueldos;
+        sueldos = new Array(5);
+        cargar(sueldos);
+        calcularGastos(sueldos);
+
+
+
+        let tamaño = parseInt(prompt("Ingrese el tamaño de los vectores:"));
+        let vector1 = [];
+        let vector2 = [];
+        for (let i = 0; i < tamaño; i++) {
+            let elemento1 = parseInt(prompt(`Ingrese el elemento ${i + 1} del primer vector:`));
+            vector1.push(elemento1);
+
+            let elemento2 = parseInt(prompt(`Ingrese el elemento ${i + 1} del segundo vector:`));
+            vector2.push(elemento2);
+        }
+
+        // Sumar componente a componente y guardar el resultado en un tercer vector
+        let vectorSuma = [];
+        for (let i = 0; i < tamaño; i++) {
+            vectorSuma.push(vector1[i] + vector2[i]);
+        }
+
+        console.log("Vector suma:", vectorSuma);
+    </script>
+
+</body>
+
+</html>
+<!-- Este programa le pedir al usuario un sueldo, para guardarlo en un array, y luego, en base a ello, genera una funcion que inicializa un total en 0 y le suma todos los valores del array, generando el total numerico de los sueldos, para luego dar un listado  -->

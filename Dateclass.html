@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        function mostrarFechaHora() {
+            let fecha
+            fecha = new Date();
+            document.write('Hoy es ');
+            document.write(fecha.getDate() + '/');
+            document.write((fecha.getMonth() + 1) + '/');
+            document.write(fecha.getFullYear());
+            document.write('<br>');
+            document.write('Es la hora ');
+            document.write(fecha.getHours() + ':');
+            document.write(fecha.getMinutes() + ':');
+            document.write(fecha.getSeconds());
+        }
+        function obtenerCuatrimestre(mes) {
+    if (mes >= 1 && mes <= 4) {
+        return "Primer cuatrimestre";
+    } else if (mes >= 5 && mes <= 8) {
+        return "Segundo cuatrimestre";
+    } else if (mes >= 9 && mes <= 12) {
+        return "Tercer cuatrimestre";
+    } else {
+        return "Mes inválido";
+    }
+}
+
+        function obtenerFechaConFormato() {
+            let fecha = new Date();
+            let diaSemana = fecha.getDay();
+
+            let diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+            let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+            let dia = fecha.getDate();
+            let mes = fecha.getMonth();
+            let año = fecha.getFullYear();
+
+            let diaSemanaTexto = diasSemana[diaSemana];
+            let mesTexto = meses[mes];
+
+            return `Hoy es ${diaSemanaTexto} ${dia} de ${mesTexto} de ${año}`;
+        }
+
+        let fecha2 = new Date();
+        let mesActual = fecha.getMonth() + 1; // Sumamos 1 porque los meses en JavaScript van de 0 a 11
+
+        console.log("Cuatrimestre:", obtenerCuatrimestre(mesActual));
+        console.log(obtenerFechaConFormato());function obtenerCuatrimestre(mes) {
+            if (mes >= 1 && mes <= 4) {
+                return "Primer cuatrimestre";
+            } else if (mes >= 5 && mes <= 8) {
+                return "Segundo cuatrimestre";
+            } else if (mes >= 9 && mes <= 12) {
+                return "Tercer cuatrimestre";
+            } else {
+                return "Mes inválido";
+            }
+        }
+
+        function obtenerFechaConFormato() {
+            let fecha = new Date();
+            let diaSemana = fecha.getDay();
+
+            let diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+            let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+            let dia = fecha.getDate();
+            let mes = fecha.getMonth();
+            let año = fecha.getFullYear();
+
+            let diaSemanaTexto = diasSemana[diaSemana];
+            let mesTexto = meses[mes];
+
+            return `Hoy es ${diaSemanaTexto} ${dia} de ${mesTexto} de ${año}`;
+        }
+
+        let fecha3 = new Date();
+        let mesActual1 = fecha.getMonth() + 1; // Sumamos 1 porque los meses en JavaScript van de 0 a 11
+
+        console.log("Cuatrimestre:", obtenerCuatrimestre(mesActual));
+        console.log(obtenerFechaConFormato());
+
+        //Llamada a la función
+        mostrarFechaHora();
+    </script>
+
+</body>
+
+</html>
+
+<!--Este codigo, al ejecutar la funcion mostrarFechaHora, el codigo te dira cual es el dia, junto al mes y la hora actual en la que lo estas ejecutando, ya que accede a los datos del equipo, para mas precision --> 
+<!-- La primer funcion corresponde al ejemplo, el resto son del problema-->
+
+

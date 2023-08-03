@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let cadena = prompt('Ingrese una cadena:');
+        document.write('La cadena ingresada es:' + cadena);
+        document.write('<br>');
+        document.write('La cantidad de caracteres son:' + cadena.length);
+        document.write('<br>');
+        document.write('El primer carácter es:' + cadena.charAt(0));
+        document.write('<br>');
+        document.write('Los primeros 3 caracteres son:' + cadena.substring(0, 3));
+        document.write('<br>');
+        if (cadena.indexOf('hola') != -1) {
+            document.write('Se ingresó la subcadena hola');
+        } else {
+            document.write('No se ingresó la subcadena hola');
+        }
+        document.write('<br>');
+        document.write('La cadena convertida a mayúsculas es:' + cadena.toUpperCase());
+        document.write('<br>');
+        document.write('La cadena convertida a minúsculas es:' + cadena.toLowerCase());
+        document.write('<br>');
+
+
+        let strinput=prompt("Ingrese una cadena, ingrese la palabra Fin para terminar el input y le dire cuantos nums se ingrsaron ")
+
+        let cont1=0
+        while (strinput!="Fin") {
+            let cont1=cont1+1
+        }
+        console.log(`Se ingresaron ${cont1} valores`)
+
+
+        let strinput2=prompt("Ingrese una cadena, ingrese la palabra fin(puede ingresar tmb Fin o FIN) para terminar el input y le dire cuantos nums se ingrsaron ")
+
+        let cont2=0
+        while (strinput2!="Fin"||strinput2!="FIN" ||strinput2!="fin" ) {
+            let cont2=cont2+1
+        }
+        console.log(`Se ingresaron ${cont2} valores`)
+
+
+        let fuente = prompt("Ingrese el texto fuente:");
+        let clave = prompt("Ingrese la clave a buscar:");
+
+        // Buscar la clave en el texto fuente
+        let posicion = fuente.indexOf(clave);
+
+        // Verificar si la clave se encontró o no
+        if (posicion !== -1) {
+            console.log(`La clave '${clave}' se encontró en la posición ${posicion} del texto fuente.`);
+        } else {
+            console.log(`La clave '${clave}' no se encontró en el texto fuente.`);
+        }
+        function esPalindromo(cadena) {
+    // Convertir la cadena a minúsculas y eliminar espacios en blanco
+    cadena = cadena.toLowerCase().replace(/ /g, "");
+
+    // Comparar la cadena original con su versión invertida
+    return cadena === cadena.split("").reverse().join("");
+}
+
+// Ingresar una cadena para verificar si es un palíndromo
+    let entrada = prompt("Ingrese una cadena para verificar si es un palíndromo:");
+
+    if (esPalindromo(entrada)) {
+        console.log(`"${entrada}" es un palíndromo.`);
+    } else {
+        console.log(`"${entrada}" no es un palíndromo.`);
+    }
+    
+
+    const maildir=prompt("Ingrese un mail")
+
+    const mailid="@"
+
+    let posicion1 = cadena.indexOf(caracterBuscado);
+
+    if (posicion !== -1) {
+        console.log(`El caracter "${caracterBuscado}" se encuentra en la posición ${posicion1} de la cadena.`);
+    } else {
+        console.log(`El caracter "${caracterBuscado}" no se encuentra en la cadena.`);
+    }
+
+
+
+
+
+
+            // Ingresar un String por teclado
+        let cadena1 = prompt("Ingrese un String:");
+
+        // Función para imprimir la primera mitad de los caracteres de la cadena
+        function imprimirPrimeraMitad(cadena1) {
+            let longitud = cadena1.length;
+            let mitad = Math.floor(longitud / 2);
+            let primeraMitad = cadena1.substring(0, mitad);
+            console.log("Primera mitad:", primeraMitad);
+        }
+
+        // Función para imprimir el último carácter
+        function imprimirUltimoCaracter(cadena1) {
+            let ultimoCaracter = cadena1.charAt(cadena1.length - 1);
+            console.log("Último carácter:", ultimoCaracter);
+        }
+
+        // Función para imprimir la cadena en forma inversa
+        function imprimirInverso(cadena1) {
+            let inverso = cadena1.split("").reverse().join("");
+            console.log("Inverso:", inverso);
+        }
+
+        // Función para imprimir cada carácter separado por un guión
+        function imprimirConGuion(cadena1) {
+            let conGuion = cadena1.split("").join("-");
+            console.log("Con guión:", conGuion);
+        }
+
+        // Función para imprimir la cantidad de vocales en la cadena
+        function contarVocales(cadena1) {
+            let vocales = cadena1.match(/[aeiouAEIOU]/g);
+            let cantidadVocales = vocales ? vocales.length : 0;
+            console.log("Cantidad de vocales:", cantidadVocales);
+        }
+
+        // Llamar a las funciones con el String ingresado
+        imprimirPrimeraMitad(cadena1);
+        imprimirUltimoCaracter(cadena1);
+        imprimirInverso(cadena1);
+        imprimirConGuion(cadena1);
+        contarVocales(cadena1);
+
+
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- Este programa muestra una cadena ingresada por el usuario, te muestra su largo, su primer caracter y sus primeros 3 caracteres, ademas de decirte si la caena ingresada es o no hola, y luego convierte la cadena a mayusculas y minusculas-->

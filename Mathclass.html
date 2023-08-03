@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let selec = parseInt(prompt('Ingrese un valor entre 1 y 10'));
+        let num = parseInt(Math.random() * 10) + 1;
+        if (num == selec)
+            document.write('Ganó el número que se sorteó es el ' + num);
+        else
+            document.write('Lo siento se sorteó el valor ' + num + ' y usted eligió el ' + selec);
+        
+        const numcube=parseInt(prompt("Ingrese un numero para calcular su cubo: "))
+        const numroot2=parseInt(prompt("Ingrese un numero para calcular su raiz cuadrada: "))
+        let cubeit=numcube**3 
+        let rootit = Math.sqrt(numroot2);
+       console.log(`La raíz cuadrada de ${numroot2} es ${rootit}`);
+    </script>
+
+</body>
+
+</html>
